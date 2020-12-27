@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64F4F7BF-310E-410F-B297-78B4A62428DA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RayQuantities</RootNamespace>
+    <AssemblyName>RayQuantities</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="codegen\Acceleration.cs" />
+    <Compile Include="codegen\AmountOfSubstance.cs" />
+    <Compile Include="codegen\Angle.cs" />
+    <Compile Include="codegen\Area.cs" />
+    <Compile Include="codegen\Density.cs" />
+    <Compile Include="codegen\Dimensionless.cs" />
+    <Compile Include="codegen\ElectricCurrent.cs" />
+    <Compile Include="codegen\Force.cs" />
+    <Compile Include="codegen\Length.cs" />
+    <Compile Include="codegen\LengthCubMass.cs" />
+    <Compile Include="codegen\LengthCubMassPerTime.cs" />
+    <Compile Include="codegen\LengthCubMassPerTimeCub.cs" />
+    <Compile Include="codegen\LengthCubMassPerTimeSqr.cs" />
+    <Compile Include="codegen\LengthCubMassTime.cs" />
+    <Compile Include="codegen\LengthCubPerMass.cs" />
+    <Compile Include="codegen\LengthCubPerMassTime.cs" />
+    <Compile Include="codegen\LengthCubPerMassTimeCub.cs" />
+    <Compile Include="codegen\LengthCubPerMassTimeSqr.cs" />
+    <Compile Include="codegen\LengthCubPerTime.cs" />
+    <Compile Include="codegen\LengthCubPerTimeCub.cs" />
+    <Compile Include="codegen\LengthCubPerTimeSqr.cs" />
+    <Compile Include="codegen\LengthCubTime.cs" />
+    <Compile Include="codegen\LengthCubTimeCub.cs" />
+    <Compile Include="codegen\LengthCubTimeCubMass.cs" />
+    <Compile Include="codegen\LengthCubTimeCubPerMass.cs" />
+    <Compile Include="codegen\LengthCubTimePerMass.cs" />
+    <Compile Include="codegen\LengthCubTimeSqr.cs" />
+    <Compile Include="codegen\LengthCubTimeSqrMass.cs" />
+    <Compile Include="codegen\LengthCubTimeSqrPerMass.cs" />
+    <Compile Include="codegen\LengthMass.cs" />
+    <Compile Include="codegen\LengthMassPerTime.cs" />
+    <Compile Include="codegen\LengthMassPerTimeCub.cs" />
+    <Compile Include="codegen\LengthMassTime.cs" />
+    <Compile Include="codegen\LengthPerMass.cs" />
+    <Compile Include="codegen\LengthPerMassTime.cs" />
+    <Compile Include="codegen\LengthPerMassTimeCub.cs" />
+    <Compile Include="codegen\LengthPerMassTimeSqr.cs" />
+    <Compile Include="codegen\LengthPerTimeCub.cs" />
+    <Compile Include="codegen\LengthSqrMass.cs" />
+    <Compile Include="codegen\LengthSqrMassPerTime.cs" />
+    <Compile Include="codegen\LengthSqrMassPerTimeCub.cs" />
+    <Compile Include="codegen\LengthSqrMassPerTimeSqr.cs" />
+    <Compile Include="codegen\LengthSqrMassTime.cs" />
+    <Compile Include="codegen\LengthSqrPerMass.cs" />
+    <Compile Include="codegen\LengthSqrPerMassTime.cs" />
+    <Compile Include="codegen\LengthSqrPerMassTimeCub.cs" />
+    <Compile Include="codegen\LengthSqrPerMassTimeSqr.cs" />
+    <Compile Include="codegen\LengthSqrPerTime.cs" />
+    <Compile Include="codegen\LengthSqrPerTimeCub.cs" />
+    <Compile Include="codegen\LengthSqrTime.cs" />
+    <Compile Include="codegen\LengthSqrTimePerMass.cs" />
+    <Compile Include="codegen\LengthSqrTimeSqr.cs" />
+    <Compile Include="codegen\LengthSqrTimeSqrMass.cs" />
+    <Compile Include="codegen\LengthSqrTimeSqrPerMass.cs" />
+    <Compile Include="codegen\LengthTime.cs" />
+    <Compile Include="codegen\LengthTimePerMass.cs" />
+    <Compile Include="codegen\LuminousIntensity.cs" />
+    <Compile Include="codegen\Mass.cs" />
+    <Compile Include="codegen\MassPerLength.cs" />
+    <Compile Include="codegen\MassPerLengthCubTimeCub.cs" />
+    <Compile Include="codegen\MassPerLengthSqr.cs" />
+    <Compile Include="codegen\MassPerLengthSqrTimeCub.cs" />
+    <Compile Include="codegen\MassPerLengthSqrTimeSqr.cs" />
+    <Compile Include="codegen\MassPerLengthTime.cs" />
+    <Compile Include="codegen\MassPerLengthTimeCub.cs" />
+    <Compile Include="codegen\MassPerLengthTimeSqr.cs" />
+    <Compile Include="codegen\MassPerTime.cs" />
+    <Compile Include="codegen\MassPerTimeCub.cs" />
+    <Compile Include="codegen\MassPerTimeLengthCub.cs" />
+    <Compile Include="codegen\MassPerTimeLengthSqr.cs" />
+    <Compile Include="codegen\MassPerTimeSqr.cs" />
+    <Compile Include="codegen\MassPerTimeSqrLengthCub.cs" />
+    <Compile Include="codegen\MassTime.cs" />
+    <Compile Include="codegen\MassTimePerLength.cs" />
+    <Compile Include="codegen\MassTimePerLengthCub.cs" />
+    <Compile Include="codegen\MassTimePerLengthSqr.cs" />
+    <Compile Include="codegen\PerAmountOfSubstance.cs" />
+    <Compile Include="codegen\PerAngle.cs" />
+    <Compile Include="codegen\PerElectricCurrent.cs" />
+    <Compile Include="codegen\PerLength.cs" />
+    <Compile Include="codegen\PerLengthCub.cs" />
+    <Compile Include="codegen\PerLengthCubTimeCub.cs" />
+    <Compile Include="codegen\PerLengthMass.cs" />
+    <Compile Include="codegen\PerLengthMassTime.cs" />
+    <Compile Include="codegen\PerLengthMassTimeCub.cs" />
+    <Compile Include="codegen\PerLengthMassTimeSqr.cs" />
+    <Compile Include="codegen\PerLengthSqr.cs" />
+    <Compile Include="codegen\PerLengthSqrTimeCub.cs" />
+    <Compile Include="codegen\PerLengthSqrTimeSqr.cs" />
+    <Compile Include="codegen\PerLengthTime.cs" />
+    <Compile Include="codegen\PerLengthTimeCub.cs" />
+    <Compile Include="codegen\PerLengthTimeSqr.cs" />
+    <Compile Include="codegen\PerLuminousIntensity.cs" />
+    <Compile Include="codegen\PerMass.cs" />
+    <Compile Include="codegen\PerMassLengthCub.cs" />
+    <Compile Include="codegen\PerMassLengthCubTimeCub.cs" />
+    <Compile Include="codegen\PerMassLengthSqr.cs" />
+    <Compile Include="codegen\PerMassLengthSqrTimeCub.cs" />
+    <Compile Include="codegen\PerMassLengthSqrTimeSqr.cs" />
+    <Compile Include="codegen\PerMassTime.cs" />
+    <Compile Include="codegen\PerMassTimeCub.cs" />
+    <Compile Include="codegen\PerMassTimeLengthCub.cs" />
+    <Compile Include="codegen\PerMassTimeLengthSqr.cs" />
+    <Compile Include="codegen\PerMassTimeSqr.cs" />
+    <Compile Include="codegen\PerMassTimeSqrLengthCub.cs" />
+    <Compile Include="codegen\PerTemperature.cs" />
+    <Compile Include="codegen\PerTime.cs" />
+    <Compile Include="codegen\PerTimeCub.cs" />
+    <Compile Include="codegen\PerTimeLengthCub.cs" />
+    <Compile Include="codegen\PerTimeLengthSqr.cs" />
+    <Compile Include="codegen\PerTimeSqr.cs" />
+    <Compile Include="codegen\PerTimeSqrLengthCub.cs" />
+    <Compile Include="codegen\QDose.cs" />
+    <Compile Include="codegen\Speed.cs" />
+    <Compile Include="codegen\Temperature.cs" />
+    <Compile Include="codegen\Time.cs" />
+    <Compile Include="codegen\TimeCub.cs" />
+    <Compile Include="codegen\TimeCubLength.cs" />
+    <Compile Include="codegen\TimeCubLengthMass.cs" />
+    <Compile Include="codegen\TimeCubLengthPerMass.cs" />
+    <Compile Include="codegen\TimeCubLengthSqr.cs" />
+    <Compile Include="codegen\TimeCubLengthSqrMass.cs" />
+    <Compile Include="codegen\TimeCubLengthSqrPerMass.cs" />
+    <Compile Include="codegen\TimeCubMass.cs" />
+    <Compile Include="codegen\TimeCubMassPerLength.cs" />
+    <Compile Include="codegen\TimeCubMassPerLengthCub.cs" />
+    <Compile Include="codegen\TimeCubMassPerLengthSqr.cs" />
+    <Compile Include="codegen\TimeCubPerLength.cs" />
+    <Compile Include="codegen\TimeCubPerLengthCub.cs" />
+    <Compile Include="codegen\TimeCubPerLengthMass.cs" />
+    <Compile Include="codegen\TimeCubPerLengthSqr.cs" />
+    <Compile Include="codegen\TimeCubPerMass.cs" />
+    <Compile Include="codegen\TimeCubPerMassLengthCub.cs" />
+    <Compile Include="codegen\TimeCubPerMassLengthSqr.cs" />
+    <Compile Include="codegen\TimePerLength.cs" />
+    <Compile Include="codegen\TimePerLengthCub.cs" />
+    <Compile Include="codegen\TimePerLengthMass.cs" />
+    <Compile Include="codegen\TimePerLengthSqr.cs" />
+    <Compile Include="codegen\TimePerMass.cs" />
+    <Compile Include="codegen\TimePerMassLengthCub.cs" />
+    <Compile Include="codegen\TimePerMassLengthSqr.cs" />
+    <Compile Include="codegen\TimeSqr.cs" />
+    <Compile Include="codegen\TimeSqrLength.cs" />
+    <Compile Include="codegen\TimeSqrLengthMass.cs" />
+    <Compile Include="codegen\TimeSqrLengthPerMass.cs" />
+    <Compile Include="codegen\TimeSqrMass.cs" />
+    <Compile Include="codegen\TimeSqrMassPerLength.cs" />
+    <Compile Include="codegen\TimeSqrMassPerLengthCub.cs" />
+    <Compile Include="codegen\TimeSqrMassPerLengthSqr.cs" />
+    <Compile Include="codegen\TimeSqrPerLength.cs" />
+    <Compile Include="codegen\TimeSqrPerLengthCub.cs" />
+    <Compile Include="codegen\TimeSqrPerLengthMass.cs" />
+    <Compile Include="codegen\TimeSqrPerLengthSqr.cs" />
+    <Compile Include="codegen\TimeSqrPerMass.cs" />
+    <Compile Include="codegen\TimeSqrPerMassLengthCub.cs" />
+    <Compile Include="codegen\TimeSqrPerMassLengthSqr.cs" />
+    <Compile Include="codegen\Volume.cs" />
+    <Compile Include="FakeDatabase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quantity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

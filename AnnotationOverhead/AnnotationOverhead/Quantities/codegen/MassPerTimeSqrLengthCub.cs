@@ -1,0 +1,158 @@
+
+// GENERATE FILE! (15/04/2020 13:18:18)
+// Changes will be lost!
+using System;
+using RaySearch.QuantityExjobb4;
+
+namespace RaySearch.CorePlatform.Framework
+{
+    
+    [Serializable]
+    public sealed class MassPerTimeSqrLengthCub : Quantity, IEquatable<MassPerTimeSqrLengthCub>, IComparable
+    {
+    internal MassPerTimeSqrLengthCub(double value) : base(value, 2)
+    {
+        MassPerTimeSqrLengthCub.ImportDisplayUnitFromDatabase_();
+    }
+    internal MassPerTimeSqrLengthCub(double value, double minValue, double maxValue) : base(value, 2)
+    {
+        MassPerTimeSqrLengthCub.ImportDisplayUnitFromDatabase_();
+        HasMinValue = true;
+        HasMaxValue = true;
+        MinValue = minValue;
+        MaxValue = maxValue;
+    }
+    public MassPerTimeSqrLengthCub(MassPerTimeSqrLengthCub other) : base(other)
+    {
+        MassPerTimeSqrLengthCub.ImportDisplayUnitFromDatabase_();
+        HasMinValue = other.HasMinValue;
+        HasMaxValue = other.HasMaxValue;
+        MinValue = other.MinValue;
+        MaxValue = other.MaxValue;
+    }
+    private static bool displayUnitIsImported_ = false;
+    private static void ImportDisplayUnitFromDatabase_()
+    {
+        if (!displayUnitIsImported_ && FakeDatabase.Units.ContainsKey("MassPerTimeSqrLengthCub"))
+        {
+            switch(FakeDatabase.Units["MassPerTimeSqrLengthCub"])
+            {
+				      case "kilogrampersecondsqrcentimetercub": displayUnit_ = kilogrampersecondsqrcentimetercub_; break;
+				      case "kilogrampersecondsqrmillimetercub": displayUnit_ = kilogrampersecondsqrmillimetercub_; break;
+				      case "kilogrampersecondsqrmetercub": displayUnit_ = kilogrampersecondsqrmetercub_; break;
+				      case "kilogrampersecondsqrinchcub": displayUnit_ = kilogrampersecondsqrinchcub_; break;
+				      default: displayUnit_ = platformUnit_; break;
+            }
+        }
+        displayUnitIsImported_ = true;
+    }
+    public override string ToString() => $"{(Value_ / displayUnit_.Factor).ToString("0." + new String('#', NumberOfDecimalsDisplayed_))} {displayUnit_.Symbol}";
+    
+#region units
+	private static Unit_ kilogrampersecondsqrcentimetercub_ = new Unit_("KilogramPerSecondSqrCentimeterCub", "kg/s² cm³", 1.0);
+	private static Unit_ kilogrampersecondsqrmillimetercub_ = new Unit_("KilogramPerSecondSqrMillimeterCub", "kg/s² mm³", 999.9999999999998);
+	private static Unit_ kilogrampersecondsqrmetercub_ = new Unit_("KilogramPerSecondSqrMeterCub", "kg/s² m³", 1e-06);
+	private static Unit_ kilogrampersecondsqrinchcub_ = new Unit_("KilogramPerSecondSqrInchCub", "kg/s² in³", 0.05960464477539062);
+	private static Unit_ platformUnit_ = kilogrampersecondsqrcentimetercub_;
+	private static Unit_ displayUnit_ = kilogrampersecondsqrcentimetercub_;
+#endregion
+
+#region comparisons
+
+    public override int GetHashCode() => base.GetHashCode();
+    public override bool Equals(Object obj) => base.Equals(obj);
+    public bool Equals(MassPerTimeSqrLengthCub other) => other is object && Equals((object)other);
+    public int CompareTo(MassPerTimeSqrLengthCub other) => Value_.CompareTo(other?.Value_);
+    public int CompareTo(object obj)
+    {
+        if (obj is null) throw new ArgumentNullException(nameof(obj));
+        if (!(obj is MassPerTimeSqrLengthCub other)) throw new ArgumentException("Object is not a MassPerTimeSqrLengthCub.", nameof(obj));
+        return CompareTo(other);
+    }
+
+    public static bool operator ==(MassPerTimeSqrLengthCub l1, MassPerTimeSqrLengthCub l2) => l1 is object && l1.Equals(l2);
+    public static bool operator !=(MassPerTimeSqrLengthCub l1, MassPerTimeSqrLengthCub l2) => !(l1 == l2);
+    public static bool operator <(MassPerTimeSqrLengthCub l1, MassPerTimeSqrLengthCub l2) => l1 is object && l2 is object && l1.CompareTo(l2) < 0;
+    public static bool operator >(MassPerTimeSqrLengthCub l1, MassPerTimeSqrLengthCub l2) => l1 is object && l2 is object && l1.CompareTo(l2) > 0;
+    public static bool operator <=(MassPerTimeSqrLengthCub l1, MassPerTimeSqrLengthCub l2) => l1 is object && l2 is object && l1.CompareTo(l1) <= 0;
+    public static bool operator >=(MassPerTimeSqrLengthCub l1, MassPerTimeSqrLengthCub l2) => l1 is object && l2 is object && l1.CompareTo(l2) >= 0;
+    
+#endregion
+
+#region conversions
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrCentimeterCubs(double value, double minValue, double maxValue) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrcentimetercub_.Factor, minValue * kilogrampersecondsqrcentimetercub_.Factor, maxValue * kilogrampersecondsqrcentimetercub_.Factor);
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrCentimeterCubs(double value) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrcentimetercub_.Factor);
+		public double GetValueInKilogramPerSecondSqrCentimeterCubs() => Value_ / kilogrampersecondsqrcentimetercub_.Factor;
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrMillimeterCubs(double value, double minValue, double maxValue) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrmillimetercub_.Factor, minValue * kilogrampersecondsqrmillimetercub_.Factor, maxValue * kilogrampersecondsqrmillimetercub_.Factor);
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrMillimeterCubs(double value) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrmillimetercub_.Factor);
+		public double GetValueInKilogramPerSecondSqrMillimeterCubs() => Value_ / kilogrampersecondsqrmillimetercub_.Factor;
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrMeterCubs(double value, double minValue, double maxValue) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrmetercub_.Factor, minValue * kilogrampersecondsqrmetercub_.Factor, maxValue * kilogrampersecondsqrmetercub_.Factor);
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrMeterCubs(double value) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrmetercub_.Factor);
+		public double GetValueInKilogramPerSecondSqrMeterCubs() => Value_ / kilogrampersecondsqrmetercub_.Factor;
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrInchCubs(double value, double minValue, double maxValue) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrinchcub_.Factor, minValue * kilogrampersecondsqrinchcub_.Factor, maxValue * kilogrampersecondsqrinchcub_.Factor);
+		public static MassPerTimeSqrLengthCub FromKilogramPerSecondSqrInchCubs(double value) => new MassPerTimeSqrLengthCub(value * kilogrampersecondsqrinchcub_.Factor);
+		public double GetValueInKilogramPerSecondSqrInchCubs() => Value_ / kilogrampersecondsqrinchcub_.Factor;
+
+#endregion
+
+#region arithmetic
+		public static MassPerTimeSqrLengthCub operator+(MassPerTimeSqrLengthCub o1, MassPerTimeSqrLengthCub o2) => new MassPerTimeSqrLengthCub(o1.Value_ + o2.Value_);
+		public static MassPerTimeSqrLengthCub operator-(MassPerTimeSqrLengthCub o1, MassPerTimeSqrLengthCub o2) => new MassPerTimeSqrLengthCub(o1.Value_ - o2.Value_);
+		public static Dimensionless operator/(MassPerTimeSqrLengthCub o1, MassPerTimeSqrLengthCub o2) => new Dimensionless(o1.Value_ / o2.Value_);
+		
+		public static TimePerLength operator/(MassPerTimeSqrLengthCub o1, MassPerLengthSqrTimeCub o2) => new TimePerLength(o1.Value_ / o2.Value_);
+		public static Speed operator/(MassPerLengthSqrTimeCub o1, MassPerTimeSqrLengthCub o2) => new Speed(o1.Value_ / o2.Value_);
+		
+		public static TimePerLength operator*(MassPerTimeSqrLengthCub o1, TimeCubLengthSqrPerMass o2) => new TimePerLength(o1.Value_ * o2.Value_);
+		public static TimePerLength operator*(TimeCubLengthSqrPerMass o1, MassPerTimeSqrLengthCub o2) => new TimePerLength(o1.Value_ * o2.Value_);
+		
+		public static Dimensionless operator*(MassPerTimeSqrLengthCub o1, LengthCubTimeSqrPerMass o2) => new Dimensionless(o1.Value_ * o2.Value_);
+		public static Dimensionless operator*(LengthCubTimeSqrPerMass o1, MassPerTimeSqrLengthCub o2) => new Dimensionless(o1.Value_ * o2.Value_);
+		
+		public static MassTime operator*(MassPerTimeSqrLengthCub o1, LengthCubTimeCub o2) => new MassTime(o1.Value_ * o2.Value_);
+		public static MassTime operator*(LengthCubTimeCub o1, MassPerTimeSqrLengthCub o2) => new MassTime(o1.Value_ * o2.Value_);
+		
+		public static Time operator/(MassPerTimeSqrLengthCub o1, MassPerLengthCubTimeCub o2) => new Time(o1.Value_ / o2.Value_);
+		public static PerTime operator/(MassPerLengthCubTimeCub o1, MassPerTimeSqrLengthCub o2) => new PerTime(o1.Value_ / o2.Value_);
+		
+		public static Time operator*(MassPerTimeSqrLengthCub o1, LengthCubTimeCubPerMass o2) => new Time(o1.Value_ * o2.Value_);
+		public static Time operator*(LengthCubTimeCubPerMass o1, MassPerTimeSqrLengthCub o2) => new Time(o1.Value_ * o2.Value_);
+		
+#endregion
+
+#region rules
+
+    public double MinValue { get; }
+    public double MaxValue { get; }
+    public bool HasMinValue { get; }
+    public bool HasMaxValue { get; }
+    public static bool ValidateRules(MassPerTimeSqrLengthCub masspertimesqrlengthcub, bool throwOnFail=true)
+    {
+        bool fail = false;
+        if (masspertimesqrlengthcub.HasMinValue && masspertimesqrlengthcub.Value_ < masspertimesqrlengthcub.MinValue)
+        {
+            fail = true;
+        }
+
+        if (masspertimesqrlengthcub.HasMaxValue && masspertimesqrlengthcub.Value_ > masspertimesqrlengthcub.MaxValue)
+        {
+            fail = true;
+        }
+
+        if (fail && throwOnFail)
+        {
+            new System.ArgumentException("MassPerTimeSqrLengthCub is outside its bounds.");
+        }
+        else if (fail)
+        {
+            return false;
+        }
+
+        return true;
+    }
+    
+#endregion
+
+	}
+}
+    
