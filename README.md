@@ -1,5 +1,7 @@
 # Quantities and units in software models
 
+[Quantities and units in software models](https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1535952&dswid=-399)
+
 ## Scripts (python3)
 ### quantities_codegeneration.py
 Generates C# quantities classes into the codegen folder.
